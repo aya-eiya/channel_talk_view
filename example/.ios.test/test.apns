@@ -1,0 +1,8 @@
+{
+    "Simulator Target Bundle": "jp.aya-eiya.channel.channelTalkViewExample",
+    "aps":{
+        "alert":"Test",
+        "sound":"default",
+        "badge":1
+    }
+}

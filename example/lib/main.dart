@@ -18,17 +18,24 @@ class _MyAppState extends State<MyApp> {
   bool initialized = false;
   final _ctrl = TextEditingController();
 
-  Future<void> onPluginKeySet() async {
+  void onPluginKeySet() {
     if (_ctrl.value.text != pluginKey) {
-      try {
-        pluginKey = _ctrl.value.text;
-        initialized = (await ChannelTalkView.init(pluginKey) &&
-            await ChannelTalkView.boot());
-        ChannelTalkView.show();
-        error = '';
-      } on PlatformException catch (e) {
-        error = '$e';
-      }
+      setState(() async {
+        try {
+          pluginKey = _ctrl.value.text;
+          initialized = (await ChannelTalkView.init(pluginKey) &&
+              await ChannelTalkView.boot());
+          if (initialized) {
+            Timer.periodic(Duration(seconds: 5), (t) {
+              ChannelTalkView.openNotification();
+            });
+            ChannelTalkView.show();
+          }
+          error = '';
+        } on PlatformException catch (e) {
+          error = '$e';
+        }
+      });
     }
   }
 

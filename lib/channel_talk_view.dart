@@ -21,4 +21,8 @@ class ChannelTalkView {
     final bool isOk = await _channel.invokeMethod('show');
     return isOk;
   }
+
+  static Future<bool> openNotification() async {
+    return await _channel.invokeMethod('openNotification');
+  }
 }
