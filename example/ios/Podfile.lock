@@ -1,0 +1,28 @@
+PODS:
+  - channel_talk_view (0.0.1):
+    - ChannelIOSDK
+    - Flutter
+  - ChannelIOSDK (8.3.1)
+  - Flutter (1.0.0)
+
+DEPENDENCIES:
+  - channel_talk_view (from `.symlinks/plugins/channel_talk_view/ios`)
+  - ChannelIOSDK (from `https://mobile-static.channel.io/ios/latest/xcframework.podspec`)
+  - Flutter (from `Flutter`)
+
+EXTERNAL SOURCES:
+  channel_talk_view:
+    :path: ".symlinks/plugins/channel_talk_view/ios"
+  ChannelIOSDK:
+    :podspec: https://mobile-static.channel.io/ios/latest/xcframework.podspec
+  Flutter:
+    :path: Flutter
+
+SPEC CHECKSUMS:
+  channel_talk_view: a085c31c9a174b8d3a12b0c1850616ed99ce4cb1
+  ChannelIOSDK: fe2c8d007e889899d9df2e3d5bd1f8fe035d8f6f
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+
+PODFILE CHECKSUM: 87086eaceaa7bc2f843554c1d0dda3ce2f9813ee
+
+COCOAPODS: 1.10.1
